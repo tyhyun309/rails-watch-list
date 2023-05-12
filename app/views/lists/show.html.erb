@@ -1,13 +1,14 @@
 <div class="container" style="width:70%">
   <div>
     <h2><%= @list.name %></h2>
-    <% @list.movies.each do |movie| %>
+    <% @list.bookmarks.each do |bookmark| %>
       <p>
-        <h4>Title: <%= movie.title %></h4>
-        <p><strong>Overview: </strong><%= movie.overview  %></p>
-        <p><strong>Rating: </strong><%= movie.rating  %> </p>
-        <%= image_tag "#{movie.poster_url}" , width: 300 %>
-        <%= link_to 'Remove from list👋🏻',  bookmark_path(@list.bookmarks.find_by_movie_id(movie)), data: { turbo_method: :delete, turbo_confirm: "sure?" }, class: "btn btn-primary" %>
+        <h4>Title: <%= bookmark.movie.title %></h4>
+        <h4>Comment: <%= bookmark.comment %></h4>
+        <p><strong>Overview: </strong><%= bookmark.movie.overview  %></p>
+        <p><strong>Rating: </strong><%= bookmark.movie.rating  %> </p>
+        <%= image_tag "#{bookmark.movie.poster_url}" , width: 300 %>
+        <%= link_to 'Remove from list👋🏻',  bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "sure?" }, class: "btn btn-primary" %>
       </p>
     <% end %>
   </div>
