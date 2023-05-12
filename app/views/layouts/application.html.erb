@@ -9,9 +9,14 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+    <nav class="navbar bg-secondary">
+      <%# <a class="navbar-brand" href="#"> %>
+      <%= link_to 'Home', lists_path, class: "navbar-brand px-2" %>
+      <%# </a> %>
+    </nav>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://english.cj.net/images/cjBrand/cgv/cgv_top.png);">
       <div class="container">
-        <h1>Movie lists</h1>
+        <h1>My Movie Lists LOL</h1>
         <p>영화 映画 Movies 電影😎</p>
       </div>
     </div>
