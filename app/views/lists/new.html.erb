@@ -1,8 +1,9 @@
-<div class="container" style="width:70%">
+<div class="container" style="width:70%" id="new-list">
   <h1>Add a new list</h1>
   <%= simple_form_for @list do |f| %>
     <%= f.input :name %>
     <%= f.input :photo, as: :file %>
     <%= f.submit "Add +", class: 'btn btn-primary' %>
+    <%= link_to 'Back', lists_path(anchor:'movies-all'), class: "btn btn btn-success" %>
   <% end %>
 </div>
