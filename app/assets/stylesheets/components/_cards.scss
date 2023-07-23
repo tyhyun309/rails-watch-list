@@ -70,7 +70,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Limit to 3 lines */
   -webkit-box-orient: vertical;
-  overflow: scroll;
+  overflow: auto;
   text-overflow: ellipsis;
   font-size: 12px;
   line-height: 1.4;
@@ -82,7 +82,6 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
-
 
 
 // Smallest device
